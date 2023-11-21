@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ESP32 GPS Tracker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+
+    <h1>ESP32 FPV Drone GPS Tracker</h1>
+    <h2>Josh McDowell - EE 590</h2>
+
+    <canvas id="Canvas" width="551" height="659"></canvas>
+
+    <p id="coords"></p>
+
+    <div class="gauge-parent">
+  
+      <p id="altitude"></p>
+      <p id="velocity"></p>
+
+      <div class="gauge" id="gauge-alt">
+        <div class="circle"></div>
+        <div class="square" id="square">
+            <div class="angle-text" id="text-alt"></div>
+        </div>
+        <div class="needle" id="needle-alt"></div>
+        <div class="unit-text left">0</div>
+        <div class="unit-text right">300</div>
+      </div>
+
+      <div class="gauge" id="gauge-velo">
+        <div class="circle"></div>
+        <div class="square" id="square">
+            <div class="angle-text" id="text-velo"></div>
+        </div>
+        <div class="needle" id="needle-velo"></div>
+        <div class="unit-text left">0</div>
+        <div class="unit-text right">50</div>
+      </div>
+
+    <script src="scripts.js"></script> 
+  </body>
+</html>

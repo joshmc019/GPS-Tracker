@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(199, 204, 207);
+}
+
+h1 {
+    text-align: center;
+    font-family:verdana;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    font-family:verdana;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+p {
+  text-align: center;
+  font-family:verdana;
+}
+
+.gauge-parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 0.5fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.gauge {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.square {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    background-color: rgb(199, 204, 207);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.needle {
+    position: absolute;
+    transform-origin: 50% 100%;
+    width: 4px;
+    height: 95px;
+    border-radius: 30% 30% 0 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%) rotate(0deg);
+    transition: transform 0.5s ease;
+}
+
+#needle-alt {
+    background-color: green;
+}
+
+#needle-velo {
+    background-color: blue;
+}
+
+.angle-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    font-family:verdana;
+}
+
+.unit-text {
+    position: absolute;
+    font-size: 12px;
+    color: #333;
+    font-family:verdana;
+    font-weight: bold;
+}
+
+.unit-text.left {
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -80%);
+}
+
+.unit-text.right {
+    top: 50%;
+    right: 5%;
+    transform: translate(50%, -80%);
+}
